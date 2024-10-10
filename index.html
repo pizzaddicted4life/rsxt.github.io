@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <htitle>SPLASH</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/pizzaddicted4life/SXHUB.github.io/refs/heads/main/assets/images/00-_2_-.ico">
+    <link rel="stylesheet" href="css/style.css">
+	<style>
+      *{
+                    box-sizing:border-box;
+                }
+                body{
+                    background-color:#000;
+                    perspective:1000px;
+                    padding-top:30px;
+                  }
+                .row{
+                    margin:12px auto;
+                    text-align:center;
+                }
+                .btn{
+                    border:none;
+                    font-weight:200;
+                    font-size:30px;
+                    position: relative;
+                    font-family: sans-serif;
+                    padding:10px 40px;
+                    border-radius:23px/23px;
+                    cursor:pointer;
+                    margin:18px 155px;
+                    z-index:5;
+                    border:2px solid;overflow:hidden;
+                  }
+                .btn:after{z-index:-2}
+                .btn:after,.btn:before{content:"";display:inline-block;position:absolute;}
+                .btn-awesome_one{background-color:#e74c3c;color:#fff;border:2px solid ;transition: all .3s ease-in-out;}
+                .btn-awesome_tow{background-color:#c0392b;color:#fff;transition:all .5s ease-in-out;}
+                .btn-awesome_three{background-color:#e67e22;color:#fff;transition: all .5s ease-in-out;}
+                .btn-awesome_foure{background-color:#d35400;color:#fff;transition:all .5s ease-in-out}
+                .btn-awesome_five{background-color:#f1c40f;color:#fff;transition: all .5s ease-in-out}
+                .btn-awesome_six{background-color:#f39c12;color:#fff;transition: all 1s ease-in-out}
+                .btn-awesome_seven{background-color:#1abc9c;color:#fff;transition: all .5s ease-in-out}
+                .btn-awesome_eight{background-color:#19957c;color:#fff;transition: all .7s ease-in-out}
+                .btn-awesome_nine{background-color:#1e7ab7;color:#fff;transition: all .5s ease-in-out;background-color: #3498db;}
+        
+                .btn-awesome_one:after{
+                  background-color:#eee;
+                  width:200px;
+                  height:200px;
+                  transition:all 1s ease-in-out ;
+                  margin-left:300px;
+                  z-index:-3
+              }
+              .btn-awesome_one:before{
+                  background-color:white;
+                  width:200px;
+                  height:200px;
+                  transition:all .5s ease-in-out;
+                  margin-left:500px;
+                  transition:all.9s ease-in-out;
+                 z-index:-1
+        }
+                .btn-awesome_one:hover:after{transform:scale(20,2)}
+                .btn-awesome_one:hover:before{transform: scale(7,2)}
+                .btn-awesome_one:hover{background-color:transparent;border:2px solid #f33;color:#f33}
+                .btn-awesome_tow:after{
+                  background-color:#bf4a3e;
+                  width:300px;
+                  height:300px;
+                  margin-left:60px;
+                  transition: all .5s ease-in-out;
+          }
+          .btn-awesome_tow:hover:after,.btn-awesome_tow:hover:before{transform:scale(5,3)rotateY(70deg)}
+          .btn-awesome_three{transition:all .5s ease-in-out;}
+          .btn-awesome_three:after{
+          background-color:#dd904c;
+          width:500px;
+          height: 500px;
+          margin-left:200px;
+          transition:all 1s ease-in-out;
+          }
+        .btn-awesome_three:before{
+          background-color:#c36a1c;
+          width:500px;
+          height:500px;
+          margin-left: -700px;
+          z-index:-7;
+          transition:all .9s ease-in-out;
+              }
+          .btn-awesome_three:hover:after,.btn-awesome_three:hover:before{
+          transform:scale(3,3) skew(133deg)
+          }
+        .btn-awesome_foure:after{
+          width:200px;
+          height:200px;
+          background-color:#e08143;
+          position: absolute;
+          margin-left:50px;
+          transition:all .5s ease-in-out;
+        }
+        .btn-awesome_foure:before{
+          width:200px;
+          height:200px;
+          background-color:#e9772c;
+          position:absolute;
+          margin-left:-250px;
+          transition:all .5s ease-in-out;z-index:-2
+        }
+        .btn-awesome_foure:hover:after,.btn-awesome_foure:hover:before{transform:scale(3,3)}
+        .btn-awesome_five:after{
+          width:200px;
+          height:200px;
+          position:absolute;
+          margin-left:200px;
+          background-color:#ddb516;
+          transition:all .5s ease-in-out;
+          border-radius:50%;
+        }
+        .btn-awesome_five:hover:after{
+          transform:scale(4,2) skew(30deg)
+        }
+        .btn-awesome_six:before{
+          content:"";transition: all .7s ease-in-out;
+            display: inline-block;
+            border:1px solid #f39c12;
+            padding:5px;position: absolute;margin-left:25px;margin-top:-12px;
+        }
+        .btn-awesome_six:hover:before{ transform: scale(40,40) rotate(90deg);
+            border:2px solid orange;}
+        .btn-awesome_six:hover{background-color:transparent}
+        .btn-awesome_seven:before,.btn-awesome_seven:after{
+        border:2px solid #1abc9c;
+        border-radius:50%;
+        transition:all 1s ease-in-out;
+        }
+        .btn-awesome_seven:before{transition: all .7s ease-in-out;}
+        .btn-awesome_seven:hover:before,.btn-awesome_seven:hover:after{border-radius:1%;border-color:#219e85;transform:scale(4,4)rotate(120deg);padding:60px 100px}
+        .btn-awesome_seven:hover:before{padding-right:10px;}
+        .btn-awesome_seven:hover{background-color:transparent}
+        .btn-awesome_eight:after{
+          border:2px solid  #16a085;
+          border-radius:50%;
+          transition:all .7s ease-in-out;
+          margin-left:-201px;
+          margin-top:-60px
+        }
+        .btn-awesome_eight:hover{background-color:transparent}
+        .btn-awesome_eight:hover:after{padding:100px 160px}
+        .btn-awesome_nine:after{
+          width:200px;
+          height:200px;
+          border-right:1px solid #3498db;/* style of animation */
+          border-top:1px solid #3498db;
+          border-radius:50%;
+          margin-left:-43px;
+          padding:1px;
+          transition:all 1s ease-in-out;
+          padding: -7px;
+          width: 3px;
+          height: 2px;
+          margin-top: 15px;
+        }
+        .btn-awesome_nine:hover:after{transform: rotate(650deg) scale(61,61);border-color:#1e7ab7}
+        .btn-awesome_nine:hover{background-color:transparent}
+  </style>
+</head>
+<body>
+  <div class="row"><!-- done -->
+    <button class="btn btn-awesome_one">Hover</button><!-- mo-awesome_one  -->
+    <button class="btn btn-awesome_tow">Hover</button><!-- mo-awesome_tow -->
+    <button class="btn btn-awesome_three">Hover</button><!-- mo-awesome_three -->
+</div>
+<div class="row"><!-- done -->
+    <button class="btn btn-awesome_foure">Hover</button><!-- mo-awesome_foure -->
+    <button class="btn btn-awesome_five">Hover</button><!-- mo-awesome_five -->
+    <button class="btn btn-awesome_six">Hover</button><!-- mo-awesome_six -->
+</div>
+<div class="row"><!-- done -->
+    <button class="btn btn-awesome_seven">Hover</button><!-- mo-awesome_seven -->
+    <button class="btn btn-awesome_eight">Hover</button><!-- mo-awesome_eight -->
+    <button class="btn btn-awesome_nine">Hover</button><!-- mo-awesome_nine -->
+</div>
+</body>
+<script>
+  
+</script>
+</html>
